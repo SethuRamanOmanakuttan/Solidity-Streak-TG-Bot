@@ -399,8 +399,8 @@ async def Web3ResourceMessage(application):
 
 # async def announce_solution(application):
 #     """Announce that solution is live"""
-#     # Calculate previous day (assuming challenge starts June 1st)
-#     current_day = (datetime.now(utc).date() - datetime(2025, 6, 1, tzinfo=utc).date()).days
+#     # Calculate previous day (assuming challenge starts October 1st)
+#     current_day = (datetime.now(utc).date() - datetime(2025, 10, 1, tzinfo=utc).date()).days
     
 #     if 1 <= current_day <= 30:
 #         challenge = get_challenge_details(current_day)

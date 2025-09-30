@@ -305,7 +305,7 @@ def get_challenge_details(day):
 
 async def announce_daily_challenge(application):
     """Announce the daily challenge at 12 AM UTC"""
-    # Calculate current day (assuming challenge starts April 1st)
+    # Calculate current day (assuming challenge starts October 1st)
     current_day = (datetime.now(utc).date() - datetime(2025, 10, 1, tzinfo=utc).date()).days + 1
     
     if 1 <= current_day <= 30:
@@ -364,8 +364,8 @@ def main() -> None:
     
     # Add a command to manually trigger announcements (for testing)
     application.add_handler(CommandHandler("announce", lambda update, context: announce_daily_challenge(application)))
-    application.add_handler(CommandHandler("reminder", lambda update, context: send_reminder(application)))
-    application.add_handler(CommandHandler("solution", lambda update, context: announce_solution(application)))
+    # application.add_handler(CommandHandler("reminder", lambda update, context: send_reminder(application)))
+    # application.add_handler(CommandHandler("solution", lambda update, context: announce_solution(application)))
     
     # Start the bot
     application.run_polling()
